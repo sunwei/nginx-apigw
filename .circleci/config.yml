@@ -11,7 +11,7 @@ jobs:
            docker cp ./ configs:/app/repo
            docker run --rm -it \
                -v "git-crypt.key:/app/key/gpg-private.asc" \
-               --volumn-from configs \
+               --volumes-from configs \
                sunzhongmou/git-crypt \
                git-crypt unlock
 

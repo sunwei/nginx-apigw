@@ -17,6 +17,7 @@ jobs:
                --volumes-from repo \
                sunzhongmou/git-crypt \
                git-crypt unlock
+           docker cp repo:/app/repo/secrets/docker-hub.env secrets/docker-hub.env
 
        - run: |
            make build

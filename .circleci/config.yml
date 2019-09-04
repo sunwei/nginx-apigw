@@ -5,13 +5,13 @@ jobs:
      working_directory: ~/nginx-apigw
      steps:
        - checkout
-       - setup_remote_docker:
-           docker_layer_caching: true
        - run: |
            echo "$BASE64_GITCRYPT_KEY" | base64 -d > git-crypt.key
+           docker create -v /app/repo --name configs alpine:3.4 /bin/true
+           docker cp ./ configs:/app/repo
            docker run --rm -it \
                -v "git-crypt.key:/app/key/gpg-private.asc" \
-               -v ".:/app/repo" \
+               --volumn-from configs \
                sunzhongmou/git-crypt \
                git-crypt unlock
 

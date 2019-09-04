@@ -24,5 +24,5 @@ jobs:
            make build
            make push
            make deploy
-           heroku update
+           curl https://cli-assets.heroku.com/install.sh | sh
            heroku container:release web --app oneapi-stg

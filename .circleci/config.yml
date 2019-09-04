@@ -9,7 +9,7 @@ jobs:
            echo "$BASE64_GITCRYPT_KEY" | base64 -d > git-crypt.key
            docker run --rm -it \
                -v "git-crypt.key:/app/key/gpg-private.asc" \
-               -v "~/nginx-apigw:/app/repo" \
+               -v "./:/app/repo" \
                sunzhongmou/git-crypt \
                git-crypt unlock
 

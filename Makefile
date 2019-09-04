@@ -2,7 +2,7 @@ unlock:
 	./unlock.sh
 
 build:
-	docker-compose build oneapi-nginx-gateway
+	docker-compose build nginx-apigw
 
 push: unlock
 	./docker-push.sh

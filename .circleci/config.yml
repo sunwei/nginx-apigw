@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+  build:
+     machine: true
+     working_directory: ~/nginx-apigw
+     steps:
+       - checkout
+       - run: |
+           echo "$BASE64_GITCRYPT_KEY" | base64 -d > git-crypt.key
+           docker run --rm -it \
+               -v "git-crypt.key:/app/key/gpg-private.asc" \
+               -v "~/nginx-apigw:/app/repo" \
+               git-crypt \
+               git-crypt unlock
+
+       - run: |
+           make build
+           make push

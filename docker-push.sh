@@ -12,8 +12,8 @@ echo "${DOCKER_PASSWORD}" | \
 docker login --username="${DOCKER_USERNAME}" --password-stdin
 
 echo "> Pushing image to docker hub..."
-docker tag oneapi-nginx-gateway:latest sunzhongmou/oneapi-nginx-gateway:latest
-docker push sunzhongmou/oneapi-nginx-gateway:latest
+docker tag nginx-apigw:latest sunzhongmou/nginx-apigw:latest
+docker push sunzhongmou/nginx-apigw:latest
 
-docker tag sunzhongmou/oneapi-nginx-gateway:latest "sunzhongmou/oneapi-nginx-gateway:$(get_commit_count)"
-docker push "sunzhongmou/oneapi-nginx-gateway:$(get_commit_count)"
+docker tag sunzhongmou/nginx-apigw:latest "sunzhongmou/nginx-apigw:$(get_commit_count)"
+docker push "sunzhongmou/nginx-apigw:$(get_commit_count)"

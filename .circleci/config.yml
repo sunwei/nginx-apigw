@@ -24,3 +24,4 @@ jobs:
            make build
            make push
            make deploy
+           heroku container:release web --app oneapi-stg

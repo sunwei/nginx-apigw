@@ -7,11 +7,14 @@ jobs:
        - checkout
        - run: |
            echo "$BASE64_GITCRYPT_KEY" | base64 -d > git-crypt.key
-           docker create -v /app/repo --name configs alpine:3.4 /bin/true
-           docker cp ./ configs:/app/repo
+           echo git-crypt.key
+           docker create -v /app/repo --name repo alpine:3.4 /bin/true
+           docker cp ./ repo:/app/repo
+           docker create -v /app/key --name key alpine:3.4 /bin/true
+           docker cp git-crypt.key key:/app/key/gpg-private.asc
            docker run --rm -it \
-               -v "git-crypt.key:/app/key/gpg-private.asc" \
-               --volumes-from configs \
+               --volumes-from key \
+               --volumes-from repo \
                sunzhongmou/git-crypt \
                git-crypt unlock
 

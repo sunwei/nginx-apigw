@@ -4,7 +4,7 @@ unlock:
 build:
 	docker-compose build nginx-apigw
 
-push: unlock
+push:
 	./docker-push.sh
 
 run:

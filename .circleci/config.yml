@@ -18,6 +18,7 @@ jobs:
                sunzhongmou/git-crypt \
                git-crypt unlock
            docker cp repo:/app/repo/secrets/docker-hub.env secrets/docker-hub.env
+           docker cp repo:/app/repo/secrets/heroku.env secrets/heroku.env
 
        - run: |
            make build

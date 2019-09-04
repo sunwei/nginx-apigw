@@ -5,7 +5,6 @@ get_commit_count() {
   git rev-list --all --count
 }
 
-cat secrets/docker-hub.env | echo
 source secrets/docker-hub.env
 echo "> Logging docker hub with user: ${DOCKER_USERNAME}"
 

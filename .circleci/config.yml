@@ -22,4 +22,4 @@ jobs:
        - run: |
            make build
            make push
-
+           make deploy

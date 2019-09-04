@@ -7,6 +7,9 @@ build:
 push:
 	./docker-push.sh
 
+deploy:
+	./docker-deploy.sh
+
 run:
 	docker run --name oneapi -itd -p 8000:80 oneapi-nginx-gateway
 

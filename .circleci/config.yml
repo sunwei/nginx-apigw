@@ -10,7 +10,7 @@ jobs:
            docker run --rm -it \
                -v "git-crypt.key:/app/key/gpg-private.asc" \
                -v "~/nginx-apigw:/app/repo" \
-               git-crypt \
+               sunzhongmou/git-crypt \
                git-crypt unlock
 
        - run: |

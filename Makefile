@@ -7,8 +7,11 @@ build:
 push:
 	./docker-push.sh
 
+push-to-heroku:
+	./docker-push-to-heroku.sh
+
 deploy:
-	./docker-deploy.sh
+	./heroku-deploy.sh
 
 run:
 	docker run --name oneapi -itd -p 8000:80 oneapi-nginx-gateway

@@ -3,7 +3,7 @@ set -e
 
 source secrets/heroku.env
 
-echo "> Pushing image to heroku..."
+echo "> Deploy web image..."
 
 APP_ID_OR_NAME="oneapi-stg"
 WEB_DOCKER_IMAGE_ID="$(docker inspect registry.heroku.com/oneapi-stg/web:latest --format={{.Id}})"

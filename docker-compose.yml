@@ -4,3 +4,5 @@ services:
   nginx-apigw:
     image: nginx-apigw:latest
     build: .
+    ports:
+      - "8008:80"

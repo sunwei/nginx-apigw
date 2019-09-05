@@ -5,4 +5,6 @@ COPY . /app/
 
 COPY nginx/ /etc/nginx/
 
-CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/api_gw.d/api.oneapi.cc.conf && nginx -g 'daemon off;'
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
+
+CMD ["nginx", "-g", "daemon off;"]

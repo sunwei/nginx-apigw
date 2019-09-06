@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b04caee-c036-4938-81d4-966980d7c759" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nginx/api_gw.d/api.oneapi.cc.conf" afterPath="$PROJECT_DIR$/nginx/api_gw.d/api.oneapi.cc.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nginx/conf.d/default.conf" afterPath="$PROJECT_DIR$/nginx/conf.d/default.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-entrypoint.sh" afterPath="$PROJECT_DIR$/docker-entrypoint.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nginx/conf.d/default.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
@@ -86,21 +84,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docker-push-to-heroku.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-push-to-heroku.sh">
+      <file leaf-file-name="docker-entrypoint.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker-entrypoint.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="76">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docker-push.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-push.sh">
+      <file leaf-file-name="docker-push-to-heroku.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-push-to-heroku.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="190">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,7 +146,6 @@
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/heroku-deploy.sh" />
         <option value="$PROJECT_DIR$/nginx/api_gw.d/api.oneapi.cc2.conf" />
-        <option value="$PROJECT_DIR$/docker-entrypoint.sh" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/nginx/conf.d/api.oneapi.cc.conf" />
         <option value="$PROJECT_DIR$/Makefile" />
@@ -156,6 +153,7 @@
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/nginx/api_gw.d/api.oneapi.cc.conf" />
         <option value="$PROJECT_DIR$/nginx/conf.d/default.conf" />
+        <option value="$PROJECT_DIR$/docker-entrypoint.sh" />
       </list>
     </option>
   </component>
@@ -1020,12 +1018,12 @@
       <workItem from="1567580092243" duration="5581000" />
       <workItem from="1567643273658" duration="3127000" />
       <workItem from="1567658133236" duration="310000" />
-      <workItem from="1567664863318" duration="12811000" />
+      <workItem from="1567664863318" duration="12849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26891000" />
+    <option name="totallyTimeSpent" value="26929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -1381,14 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-entrypoint.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-push.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1437,14 +1427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nginx/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1465,6 +1447,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nginx/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-entrypoint.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

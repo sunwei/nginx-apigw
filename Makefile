@@ -1,8 +1,10 @@
+APP_NAME = nginx-apigw
+
 unlock:
 	./unlock.sh
 
 build:
-	docker-compose build nginx-apigw
+	docker-compose build $(APP_NAME)
 
 push:
 	./docker-push.sh
@@ -14,10 +16,10 @@ deploy:
 	./heroku-deploy.sh
 
 run:
-	docker run --name oneapi -itd -p 8000:80 oneapi-nginx-gateway
+	docker run --name $(APP_NAME) -itd -p 8000:8808 $(APP_NAME)
 
 exec:
-	docker exec -it oneapi  bash
+	docker exec -it $(APP_NAME) bash
 
 clean:
-	docker stop oneapi && docker rm oneapi
+	docker stop $(APP_NAME) && docker rm $(APP_NAME)
